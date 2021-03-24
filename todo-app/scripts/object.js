@@ -1,58 +1,74 @@
-const todos = {
-    data: [],
-    filter: function (filter_text){
-        const filter_data = this.data.filter(function (record){
-            const processed_task = record.task.trim().toLowerCase()
-            const processed_filter_text = filter_text.trim().toLowerCase()
-            return processed_task.includes(processed_filter_text)
-        })
-        const tempTodos = Object.assign({}, this)
-        tempTodos.data = filter_data
-        return tempTodos
-    },
-    categorize: function (category, feature = null){
-        const categorized_data = this.data.filter(function (record){
-            if (feature === null){
-                return record !== null
-            } else {
-                return record[category] === feature
-            }
-        })
-        const tempTodos = Object.assign({}, this)
-        tempTodos.data = categorized_data
-        return tempTodos
-    },
-    load: function (){
-        const recordsJSON = localStorage.getItem("records") 
-        if (recordsJSON !== null){
-            this.data = JSON.parse(recordsJSON)
-        }
-    },
-    add: function (records){
-        this.data = this.data.concat(records)
-        localStorage.setItem("records", JSON.stringify(this.data))
-    },
-    remove: function (id){
-        const index = this.data.findIndex(function (record){
-            return record.id === id
-        })
+//
+// Helper functions
+//
 
-        if (index > -1){
-            this.data.splice(index, 1)
-            localStorage.setItem("records", JSON.stringify(this.data))
-        }
-
-    },
-    toggle_state: function (id){
-        const index = this.data.findIndex(function (record){
-            return record.id === id
-        })
-
-        if (index > -1){
-            this.data[index].completed = !this.data[index].completed
-            localStorage.setItem("records", JSON.stringify(this.data))
-        }
-    }
+function filterTodos(todos, filterText) {
+  return todos.filter((record) => {
+    const processedTask = record.task.trim().toLowerCase();
+    const processedFilterText = filterText.trim().toLowerCase();
+    return processedTask.includes(processedFilterText);
+  });
 }
 
-todos.load()
+//
+// Todo class
+//
+
+class TodoRecord {
+  constructor(id, task, completed) {
+    this.id = id;
+    this.task = task;
+    this.completed = completed;
+  }
+}
+
+class Todos extends Array {
+  getCompleted() {
+    return this.filter(record => {
+      return record.completed;
+    });
+  }
+
+  getIncomplete() {
+    return this.filter(record => {
+      return !record.completed;
+    });
+  }
+
+  add(record) {
+    this.push(record);
+    localStorage.setItem("records", JSON.stringify(this));
+  }
+
+  remove(id) {
+    const index = this.findIndex((record) => {
+        return record.id === id;
+    })
+
+    if (index > -1) {
+      this.splice(index, 1);
+      localStorage.setItem("records", JSON.stringify(this));
+    }
+  }
+
+  toggleState(id) {
+    const index = this.findIndex((record) => {
+        return record.id === id;
+    })
+
+    if (index > -1) {
+        this[index].completed = !this[index].completed;
+        localStorage.setItem("records", JSON.stringify(this));
+    }
+  }
+}
+
+//
+// Main: load all the data from local storage
+//
+
+const recordsJSON = localStorage.getItem("records");
+let todos = new Todos();
+if (recordsJSON !== null){
+  todos = todos.concat(JSON.parse(recordsJSON));
+}
