@@ -1,36 +1,35 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
-        <title>Note App</title>
-        <link rel="icon" href="/images/icon.png">
-        <link href="/styles/styles.css" rel="stylesheet">
-    </head>
-    <body>
-        <header class="header">
-            <div class="container">
-            <h1 class="header__title">Notes App</h1>
-            <h2 class="header__subtitle">Take notes and never forget</h2>
-            </div>
-        </header>
-        <div class="actions">
-            <div class="actions__container">
-            <input id="filter-notes" type="text" class="input" placeholder="Filter">
-            <select id="sort-notes" class="dropdown">
-                <option value=byModified>Sort by Last Modified</option>
-                <option value=byCreation>Sort by Date of Creation</option>
-                <option value=byName>Sort by Name</option>
-            </select>
-            </div>
-        </div>
-        <div class="container">
-            <div id="notes"></div>
-            <button id="new" class="button">New Note</button>
-        </div>
-        <script src="/scripts/object.js"></script>
-        <script src="/scripts/uuid.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js"></script>
-        <script src="/scripts/callbacks-home.js"></script>
-        <script src="/scripts/render-home.js"></script>
-    </body>
+	<head>
+		<title>Note App</title>
+		<link rel="icon" href="/images/icon.png">
+		<link href="/styles/styles.css" rel="stylesheet">
+	</head>
+	<body>
+		<header class="header">
+			<div class="container">
+			<h1 class="header__title">Notes App</h1>
+			<h2 class="header__subtitle">Take notes and never forget</h2>
+			</div>
+		</header>
+		<div class="actions">
+			<div class="actions__container">
+			<input id="filter-notes" type="text" class="input" placeholder="Filter">
+			<select id="sort-notes" class="dropdown">
+				<option value=byModified>Sort by last modified</option>
+				<option value=byTitle>Sort by title</option>
+				<option value=byCreation>Sort by date of creation</option>
+			</select>
+			</div>
+		</div>
+		<div class="container">
+			<div id="notes"></div>
+			<button id="new" class="button">New Note</button>
+		</div>
+		<script src="/scripts/object.js"></script>
+		<script src="/scripts/uuid.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js"></script>
+		<script src="/scripts/render-home.js"></script>
+	</body>
 </html>

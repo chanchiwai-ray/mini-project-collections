@@ -1,34 +1,31 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
-        <title>Note App</title>
-        <link href="/styles/styles.css" rel="stylesheet">
-        <link href="/images/icon.png" rel="icon">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js"></script>
-    </head>
-    <body>
-        <div class="header">
-                <div class="container">
-                    <h1 class="header__title">Notes App</h1>
-                    <h2 class="header__subtitle">Take notes and never forget</h2>
-                </div>
-            </div>
-        <div class="actions">
-            <div class="actions__container actions__container--spaced">
-            <a href="/index.html">back<a>
-            <span id="last-edit"></span>
-            </div>
-        </div>
-
-        <div class="container">
-            <input id="note-title" class="title-input" placeholder="Untitled">
-            <textarea id="note-body" class="body-input" placeholder="Enter Note Texts"></textarea>
-            <button id="remove-note" class="button" placeholder="Enter Note Texts">Remove</button>
-        
-        </div>
-        <script src="/scripts/object.js"></script>
-        <script src="/scripts/callback-edit.js"></script>
-        <script src="/scripts/render-edit.js"></script>
-    </body>
+	<head>
+		<title>Note App</title>
+		<link href="/styles/styles.css" rel="stylesheet">
+		<link href="/images/icon.png" rel="icon">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js"></script>
+	</head>
+	<body>
+		<div class="header">
+				<div class="container">
+					<h1 class="header__title">Notes App</h1>
+					<h2 class="header__subtitle">Take notes and never forget</h2>
+				</div>
+			</div>
+		<div class="actions">
+			<div class="actions__container actions__container--spaced">
+			<a href="/">back<a>
+			<span id="last-edit"></span>
+			</div>
+		</div>
+		<div class="container">
+			<input id="note-title" class="title-input" placeholder="Untitled">
+			<textarea id="note-body" class="body-input" placeholder="Enter Note Texts"></textarea>
+			<button id="remove-note" class="button" placeholder="Enter Note Texts">Remove</button>
+		</div>
+		<script src="/scripts/object.js"></script>
+		<script src="/scripts/render-edit.js"></script>
+	</body>
 </html>

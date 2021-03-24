@@ -160,12 +160,12 @@ a {
 
 .list-item__title {
     font-size: 1.8rem;
-    margin-bottom: .4rem
+    margin-bottom: .6rem
 }
 
 .list-item__subtitle {
     color: #666;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     font-weight: 300;
     font-style: italic;
 }
