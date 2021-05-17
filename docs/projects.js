@@ -51,7 +51,7 @@ const projects = [
         description: "",
         featured: false,
         demo: "build/covid-tracker/index.html",
-        source: "https://github.com/chanchiwai-ray/mini-project-collections/tree/master/collections/todo-app",
+        source: "https://github.com/chanchiwai-ray/mini-project-collections/tree/master/collections/covid-tracker",
         thumbnail: "images/covid_tracker.png"
     },
 ]
