@@ -3,7 +3,7 @@
 //
 
 const notesDivElement = document.querySelector("#notes");
-const newButtonElement = document.querySelector("#new"); 
+const newButtonElement = document.querySelector("#new");
 const filterInputElement = document.querySelector("#filter-notes");
 const sortNotesDropdownElement = document.querySelector("#sort-notes");
 
@@ -23,7 +23,7 @@ newButtonElement.addEventListener("click", () => {
 	const newId = uuidv4();
 	const now = moment.now();
 	notes.new(new Note(newId, "Untitled", null, now, now));
-	location.assign(`/edit-pages.html#${newId}`);
+	location.assign(`edit-pages.html#${newId}`);
 	setContent();
 });
 
@@ -45,11 +45,11 @@ function newNote(note){
 	const status = document.createElement("p");
 
 	innerContainer.classList.add("list-item");
-	innerContainer.setAttribute("href", `/edit-pages.html#${note.id}`);
+	innerContainer.setAttribute("href", `edit-pages.html#${note.id}`);
 
 	noteTitle.textContent = note.title;
 	noteTitle.classList.add("list-item__title");
-	
+
 	status.textContent = `Last modified: ${moment(note.modifiedAt).fromNow()}`;
 	status.classList.add("list-item__subtitle");
 
@@ -68,7 +68,7 @@ function appendNewNotes(notes){
 	} else {
 		notes.forEach((note) => {
 			notesDivElement.appendChild(newNote(note));
-		})   
+		})
 	}
 }
 

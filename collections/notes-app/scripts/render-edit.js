@@ -33,7 +33,7 @@ bodyElement.addEventListener("input", (e) => {
 btnElement.addEventListener("click", (e) => {
 	const currentNote = notes.find((record) => record.id === noteId);
 	notes.delete(currentNote.id);
-	location.assign("/");
+	location.assign("./");
 });
 
 // sync content across multiple tabs
@@ -53,19 +53,19 @@ function setContent() {
 	const recordIdx = notes.findIndex((record) => {
 		return record.id === noteId;
 	})
-	// if it is vaild index --> update data 
+	// if it is vaild index --> update data
 	if (recordIdx >= 0) {
 		titleElement.value = notes[recordIdx].title;
 		bodyElement.value = notes[recordIdx].body;
 		dateElement.textContent = `Last Edited: ${moment(notes[recordIdx].modifiedAt).fromNow()}`;
-	} 
+	}
 	// else if not vaild index --> redirect to home
 	else {
     const currentNote = notes.find((record) => record.id === noteId);
     if (currentNote === undefined) {
-      location.assign("/");
+      location.assign("./");
     }
-	}
+  }
 }
 
 //
