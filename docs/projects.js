@@ -5,8 +5,8 @@ const projects = [
         language: ["HTML", "CSS", "JavaScript"],
         description: "",
         featured: false,
-        demo: "collections/color-flipper/index.html",
-        source: "https://github.com/chanchiwai-ray/mini-project-collections/tree/master/color-flipper",
+        demo: "build/color-flipper/index.html",
+        source: "https://github.com/chanchiwai-ray/mini-project-collections/tree/master/collections/color-flipper",
         thumbnail: "images/color_flipper.png"
     },
     {
@@ -14,8 +14,8 @@ const projects = [
         language: ["HTML", "CSS", "JavaScript"],
         description: "",
         featured: false,
-        demo: "collections/counter/index.html",
-        source: "https://github.com/chanchiwai-ray/mini-project-collections/tree/master/counter",
+        demo: "build/counter/index.html",
+        source: "https://github.com/chanchiwai-ray/mini-project-collections/tree/master/collections/counter",
         thumbnail: "images/counter.png"
     },
     {
@@ -23,8 +23,8 @@ const projects = [
         language: ["HTML", "CSS", "JavaScript"],
         description: "",
         featured: true,
-        demo: "collections/rock-paper-scissor/index.html",
-        source: "https://github.com/chanchiwai-ray/mini-project-collections/tree/master/rock-paper-scissor",
+        demo: "build/rock-paper-scissor/index.html",
+        source: "https://github.com/chanchiwai-ray/mini-project-collections/tree/master/collections/rock-paper-scissor",
         thumbnail: "images/rock_paper_scissor.png"
     },
     {
@@ -32,8 +32,8 @@ const projects = [
         language: ["HTML", "CSS", "JavaScript"],
         description: "",
         featured: false,
-        demo: "collections/notes-app/index.html",
-        source: "https://github.com/chanchiwai-ray/mini-project-collections/tree/master/nodes-app",
+        demo: "build/notes-app/index.html",
+        source: "https://github.com/chanchiwai-ray/mini-project-collections/tree/master/collections/nodes-app",
         thumbnail: "images/note_app.png"
     },
     {
@@ -41,8 +41,8 @@ const projects = [
         language: ["HTML", "CSS", "JavaScript"],
         description: "",
         featured: false,
-        demo: "collections/todo-app/index.html",
-        source: "https://github.com/chanchiwai-ray/mini-project-collections/tree/master/todo-app",
+        demo: "build/todo-app/index.html",
+        source: "https://github.com/chanchiwai-ray/mini-project-collections/tree/master/collections/todo-app",
         thumbnail: "images/todo_app.png"
     },
     {
@@ -50,8 +50,8 @@ const projects = [
         language: ["React", "Material UI"],
         description: "",
         featured: false,
-        demo: "collections/covid-tracker/build/index.html",
-        source: "https://github.com/chanchiwai-ray/mini-project-collections/tree/master/todo-app",
+        demo: "build/covid-tracker/index.html",
+        source: "https://github.com/chanchiwai-ray/mini-project-collections/tree/master/collections/todo-app",
         thumbnail: "images/covid_tracker.png"
     },
 ]

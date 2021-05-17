@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="uft-8">
+    <meta name="author" content="Ray">
+	<title>Todo App</title>
+	<link rel="icon" href="images/icon.png?v=1">
+	<link rel="stylesheet" href="styles/styles.css">
+  <script src="scripts/uuid.js"></script>
+  </head>
+  <body>
+    <div class="header">
+      <div class="container">
+      <h1 class="header__title">Todo Lists</h1>
+      <h2 class="header__subtitle">What do you want to do?</h2>
+      </div>
+    </div>
+
+    <div class="actions">
+      <div class="actions__container">
+      <form id="new-todo">
+          <input name="text" class="input" type="text" placeholder="Add new task">
+          <button class="button">Add</button>
+      </form>
+      </div>
+    </div>
+
+    <div class="container" id="incomplete">
+      <h2 class="list-title" id="incomplete-summary"></h2>
+      <input class="input" placeholder="Filter" id="filter-incomplete-todos">
+      <div id="incomplete-todos"></div>
+    </div>
+
+    <div class="container" id="completed">
+      <h2 class="list-title" id="completed-summary"></h2>
+      <input class="input" placeholder="Filter" id="filter-completed-todos">
+      <div id="completed-todos"></div>
+    </div>
+    <script src="scripts/object.js"></script>
+    <script src="scripts/render.js"></script>
+    <script src="scripts/callbacks.js"></script>
+  </body>
+</html>
